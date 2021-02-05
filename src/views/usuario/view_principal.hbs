@@ -1,0 +1,99 @@
+
+<div class="container">
+      <div class="row">
+    
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">INFORMACION PERSONAL</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                {{!-- <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div> --}}
+                
+                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                  <dl>
+                    <dt>DEPARTMENT:</dt>
+                    <dd>Administrator</dd>
+                    <dt>HIRE DATE</dt>
+                    <dd>11/12/2013</dd>
+                    <dt>DATE OF BIRTH</dt>
+                       <dd>11/12/2013</dd>
+                    <dt>GENDER</dt>
+                    <dd>Male</dd>
+                  </dl>
+                </div>-->
+                <div class=" col-md-12 col-lg-12 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                    {{#each user}}
+                      <tr>
+                        <td>EMAIL:</td>
+                        <td>{{email}}</td>
+                      </tr>
+                      <tr>
+                        <td>NOMBRES:</td>
+                        <td>{{nombres}}</td>
+                      </tr>
+                      <tr>
+                        <td>APELLIDOS:</td>
+                        <td>{{apellidos}}</td>
+                      </tr>
+                      
+                         <tr>                      
+                        <td>NUMERO TELEFONICO:</td>
+                        <td>{{telefono}}
+                        </td>
+                           
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                </div>
+                
+              </div>
+              
+                          <a type="submit" href="/user/modificar/{{_id}}"  class="btn btn-primary" data-toggle="modal" data-target="#modificar{{_id}}" >Modificar</a>
+                          <!-- Modal -->
+                          <div class="modal fade" id="modificar{{_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                  <form action="/user/modificar/{{_id}}" method="post">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Modificar Usuario</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                      <div class="form-group">
+                                          <input type="text" class="form-control" value="{{nombres}}" name="nombres" id="" placeholder="Nombres">
+                                      </div>
+                                      <div class="form-group">
+                                          <input type="text" class="form-control" value="{{apellidos}}" name="apellidos" id="" placeholder="Apellidos">
+                                      </div>
+                                      <div class="form-group">
+                                          <input type="text" class="form-control" value="{{telefono}}" name="telefono" id="" placeholder="Telefono">
+                                      </div>
+                                      
+                                      
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="submit" class="btn btn-primary">Actualizar</button>
+                                </div>
+                                </form>    
+                              </div>
+                            </div>
+                          </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+                       {{/each}}
+           

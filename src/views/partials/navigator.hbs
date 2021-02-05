@@ -1,0 +1,78 @@
+{{#if user}}
+<nav  class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#">
+    <img src="/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Picture
+  </a>
+  <ul class="nav justify-content-end">
+    {{#each user}}
+  <li class="nav-item">
+    <a class="nav-link active" href="/user/">Perfil: {{email}}</a>
+  </li>
+  {{/each}}
+  {{#if roluser}}
+  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Noticias
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/noticias/">Ver noticias</a></li>
+            <li><a class="dropdown-item" href="/noticias/crearNews/">Crear Noticia</a></li>
+            <li><a class="dropdown-item" href="/noticias/getNews/">Mis Noticias</a></li>
+          
+          </ul>
+        </li>
+  {{/if}}
+  {{#if roladmin}}
+  
+
+  <li class="nav-item">
+    <a class="nav-link active" href="/admin/user/">Usuarios</a>
+  </li>
+ <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Noticias
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/noticias/">Ver noticias</a></li>
+            <li><a class="dropdown-item" href="/noticias/crearNews/">Crear Noticia</a></li>
+            <li><a class="dropdown-item" href="/noticias/getNews/">Mis Noticias</a></li>
+          
+          </ul>
+        </li>
+  
+  {{/if}}
+ 
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Salir</a>
+  </li>
+
+</ul>
+</nav>
+
+{{else}}
+<!-- Image and text -->
+<nav  class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#">
+    <img src="/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Picture
+  </a>
+  <ul class="nav justify-content-end">
+
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Inicio</a>
+  </li>
+    
+  <li class="nav-item">
+    <a class="nav-link active" href="/auth/signin">Ingresar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/auth/signup">Registro</a>
+  </li>
+  
+</ul>
+</nav>
+
+
+
+{{/if}}

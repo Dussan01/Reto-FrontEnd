@@ -1,0 +1,26 @@
+{{#each user}}
+<div class="">
+    <div class="row-md-5 mx-auto   " style="width: 1000px;">
+        <div class="card">
+            <div class="card-body ">
+                <form action="/noticias/crearNews/{{_id}}" method="post">
+                
+                        <div class="form-group ">
+                            <h3 for="">Agregar una noticia</h3>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="titulo" id="" placeholder="Titulo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Descripcion ...</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="descripcion" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Agregar</button> 
+                        </div>
+                </form>       
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}

@@ -1,0 +1,49 @@
+<div class="container">
+  {{#each data}}
+  <div class="well">
+      <div class="media">
+  		<div class="media-body">
+        <label for="">Nombre</label>
+    		<h4 class="media-heading">{{nombre}}</h4>
+        <label for="">Contacto</label>
+          <p class="text-left">{{contacto}}</p>
+        <label for="">Descripcion</label>
+          <p>{{descripcion}}</p>
+          
+       </div>
+    </div>
+  </div>
+  {{/each}}
+
+  
+
+  
+   <div class="well">
+      <div class="media">
+  		<div class="container">
+    <div class="row">
+		<form role="form" class="col-md-12 go-right" action="/" method="post">
+			<h2>Form To Right</h2>
+            <p>To see how it works, you clink in a input field.</p>
+			<div class="form-group">
+			<input id="name" name="nombre" type="tel" class="form-control" >
+			<label for="name">Your Name</label>
+		</div>
+		<div class="form-group">
+			<input id="phone" name="contacto" type="tel" class="form-control" >
+			<label for="phone">Primary Phone</label>
+		</div>
+		<div class="form-group">
+			<textarea id="message" name="descripcion" class="form-control"></textarea>
+			<label for="message">Message</label>
+		</div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+		</form>
+     
+	</div>
+</div>
+    </div>
+  </div>
+
+
+</div>
